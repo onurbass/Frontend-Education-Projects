@@ -1,0 +1,20 @@
+div{
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    padding: 30px;
+    margin: 25px;
+}
+#div_001{
+    border: 7px solid orange ;
+}
+#div_002{
+    border-style: dashed;
+    border-width: 4px;
+    border-bottom: 5px solid red;
+}
+#div_003{
+    border-radius: 25px;
+    border-color: yellowgreen;
+    border-style: dotted;
+}
