@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        font-family: "Script MT Bold", sans-serif ,Arial;
+        background-color: #f8f8f8;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #ffe800;
+    }
+</style>
+<body>
+<form action="_005_sonuc.html" method="get">
+
+    <label for="isim">İsim:</label>
+    <input type="text" id="isim" name="isim">
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email">
+
+    <input type="submit" id="gonder">
+
+</form>
+</body>
+</html>

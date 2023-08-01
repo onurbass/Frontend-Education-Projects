@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <form class="myform" action="" method="get">
+      <div class="formElement">
+        <label for="myName">First Name</label> <br />
+        <input
+          type="text"
+          name="firtsname"
+          id="myName"
+          placeholder="Your Name"
+        />
+      </div>
+      <div class="formElement">
+        <label for="mySurname">Surname</label> <br />
+        <input
+          type="text"
+          name="surname"
+          id="mySurname"
+          placeholder="Your Surname"
+        />
+      </div>
+
+      <div class="formElement">
+        <label for="myEmail">Email</label> <br />
+        <input type="email" name="email" id="myEmail" />
+      </div>
+
+      <div class="formElement">
+        <label for="myPassword">Password</label> <br />
+        <input type="password" name="password" id="myPassword" />
+      </div>
+      <div class="formElement">
+        <label for="myAge">Age</label> <br />
+        <input type="number" name="age" id="myAge" />
+      </div>
+
+      <div class="formElement">
+        <label for="myDate">Date</label> <br />
+        <input type="date" name="date" id="myDate" />
+      </div>
+      <div class="formElement">
+        <label for="female">Gender</label> <br />
+        <input type="radio" name="gender" id="male" value="MALE" />
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="FEMALE" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="other" value="OTHER" />
+        <label for="other">Other</label>
+      </div>
+
+      <div class="formElement">
+        <label for="myMusic">Hobies</label> <br />
+        <!-- 1. -->
+        <input type="checkbox" name="art" id="myArt" value="ART" />
+        <label for="myArt">Art</label>
+        <!-- 2. -->
+        <input type="checkbox" name="sport" id="mysport" value="SPORT" />
+        <label for="mysport">Sport</label>
+        <!-- 3. -->
+        <input type="checkbox" name="music" id="myMusic" value="MUSIC" />
+        <label for="myMusic">Music</label>
+      </div>
+
+      <div class="formElement">
+        <label for="myCity">City</label> <br />
+        <select name="city" id="myCity">
+          <option value="ANKARA">Ankara</option>
+          <option value="ISTANBUL">Istanbul</option>
+          <option value="ANTALYA" selected>Antalya</option>
+          <option value="IZMIR">Izmir</option>
+        </select>
+      </div>
+
+      <div class="formElement">
+        <textarea
+          style="resize: none"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Your message"
+        ></textarea>
+      </div>
+      <div class="formElement button-group">
+        <input type="submit" class="btn submit" value="Gönder" />
+        <input type="reset" class="btn clear" value="Temizle" />
+      </div>
+    </form>
+  </body>
+</html>
