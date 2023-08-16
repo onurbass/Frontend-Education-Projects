@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      /* display grid ayarlanmış sayfa 2 kolona ayrılmış 1fr 1fr dediği oranlar. ve 3 satıra ayrılmış onların yüksekliği verilmiş ve blocklar arasındaki boşluklar 30px olarak ayarlanmış her div için*/
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 200px 200px;
+        gap: 30px;
+      }
+      /* ilk kartın span 2 verilme sebebi ilk kartın 2 sütunu kaplaması istenmesi diğer satılar 2ye bölünmüşken bu tek bir satır*/
+      .first {
+        grid-column: span 2;
+      }
+
+      .card {
+        background-color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Grid</h1>
+    <div class="grid-container">
+      <div class="first card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+  </body>
+</html>
