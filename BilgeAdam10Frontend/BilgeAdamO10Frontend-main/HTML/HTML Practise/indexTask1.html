@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form {
+        max-width: 400px; /* Formun maksimum genişliğini ayarlayabilirsiniz */
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body style="justify-content: center">
+    <form>
+      <label for="name"> First Name</label><br />
+      <input id="name" type="text" /><br />
+
+      <label for="name"> Last Name</label><br />
+      <input id="name" type="text" /><br />
+
+      <label for="mail"> E-Mail</label><br />
+      <input id="mail" type="text" pattern=".+@example.com" /><br />
+
+      <label for="number"> Phone Number</label><br />
+      <input
+        id="number"
+        type="text"
+        placeholder="543-123-45-67"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+      /><br />
+      <label for="password"> Password</label><br />
+      <input id="password" type="text" /><br />
+      <br />
+      <label for="gender"> Gender</label> <br />
+
+      <select name="gender" id="selection">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="Other">Other</option></select
+      ><br />
+
+      <p>Marital Status</p>
+      <label for="status"> Single</label>
+      <input name="status" type="radio" />
+      <label for="status"> Married</label>
+      <input name="status" type="radio" /> <br />
+
+      <label for="date"> Birthday</label><br />
+      <input id="date" type="date" /><br />
+      <label for="month"> Birthday(Month and Year)</label><br />
+      <input id="month" name="month" type="month" /><br />
+      <label for="week"> Week</label><br />
+      <input id="week" name="week" type="week" lang="tr" /><br />
+      <label for="time"> Time</label><br />
+      <input id="time" name="time" type="" /><br />
+
+      <label for="article"> About</label><br />
+      <textarea id="article" name="article" rows="10" cols="30"></textarea>
+      <br />
+
+      <label
+        >Which course?
+        <br />
+        <select name="select2" multiple size="5">
+          <option value="value1">HTML</option>
+          <option value="value2">CSS</option>
+          <option value="value3">JavaScript</option>
+          <option value="value3">React</option>
+          <option value="value3">C#</option>
+        </select> </label
+      ><br />
+      <br />
+
+      <label for="quantity">Quantity(1-5)</label><br />
+      <input id="quantity" name="quantity" type="number" min="1" max="5" />
+
+      <br />
+      <label for="IntervalId1">Interval(0 - 50): <br /></label>
+      <input
+        id="IntervalId1"
+        type="range"
+        name="IntervalId1"
+        min="0"
+        max="50"
+        step="1"
+      />
+      <br />
+
+      <br />
+      <label
+        >Course Type: <br />
+        <label><input type="checkbox" name="Online" /> Online</label>
+        <label><input type="checkbox" name="Hybrid" /> Hybrid</label>
+        <label><input type="checkbox" name="Video" /> Video</label>
+      </label>
+      <br />
+      <br />
+      <div>
+        <label for="FavoriteColorId1">Favorite Color: <br /></label>
+        <input id="FavoriteColorId1" type="color" />
+        <br />
+        <br />
+        <label for="UrlId1">URL: <br /></label>
+        <input id="UrlId1" type="text" name="UrlId1" />
+        <br />
+        <br />
+        <label
+          >Select File: <br />
+          <input type="file" name="file1" />
+        </label>
+        <br />
+        <br />
+        <br />
+        <input type="submit" value="Save" />
+        <br />
+        <br />
+        <button type="submit">Save</button>
+      </div>
+      <ul>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+      </ul>
+      <br />
+    </form>
+  </body>
+</html>
+<!-- alt+ aşağı yukarı tuşları bulunduğun satırı taşır -->
+<!-- alt+ shift aşağı yukarı tuşları bulunduğun satırı kopyalar -->
+<!-- ctrl+d bi kelimeyi seçip basılırsa aynı isimdekileri seçer ve değişime izin verir -->
+<!-- alt+ sol click ile bir çok yere imleç konup yazılabilir aynı anda birçok yere -->
+<!-- ctrl+ shift yön tuşları imleçten sonrasını taramaya yarar  -->
+<!-- ul>li*3  -->
