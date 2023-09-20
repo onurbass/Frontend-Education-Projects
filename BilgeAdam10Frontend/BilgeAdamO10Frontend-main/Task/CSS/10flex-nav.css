@@ -1,0 +1,188 @@
+body {
+  font-family: sans-serif;
+  background-color: #e1f4ff;
+  /* Varsayılan margin değerlerini sıfırlar */
+  padding: 0; /* Varsayılan padding değerlerini sıfırlar */
+  width: 100%; /* Ekranın tamamını kaplar */
+  height: 100vh; /* Ekranın yüksekliği kadar olur */
+  overflow: hidden; /* Kenar kaydırma çubuklarını gizler */
+}
+
+* {
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 15%;
+  padding: 0 24px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-name {
+  color: var(--text-color, #252b42);
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.1px;
+}
+
+.sign-up {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  gap: 10px;
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 0px rgba (0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  gap: 24px;
+  font-family: inter;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-family: Inter;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+/* -------------------------------------------------------------- */
+.main {
+  display: flex;
+  height: 85%;
+}
+
+.right-section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+/* 553 546.55 */
+.elips > img {
+  position: relative;
+
+  height: 70%;
+  width: 100%;
+  /* top: 100px;
+  right: 320px; */
+  top: 30%;
+  right: 30%;
+}
+.kid img {
+  position: absolute;
+  height: 90%;
+
+  /* top: 0px;
+  right: 280px; */
+  bottom: 0%;
+  right: 30%;
+}
+
+/* -------------------------------------------------------------- */
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.left-section * {
+  padding: 20px;
+}
+.texts {
+  /* width: 440px; */
+  width: min-content;
+}
+
+.texts h1 {
+  color: var(--text-color, #252b42);
+  font-family: Open Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 64px; /* 133.333% */
+  letter-spacing: 0.2px;
+}
+.edu-craft {
+  color: purple;
+  padding-left: 0;
+}
+.texts p {
+  color: var(--second-text-color, #737373);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 150% */
+  letter-spacing: 0.2px;
+  width: 357px;
+  height: auto;
+}
+.buttondiv,
+.icondiv {
+  display: flex;
+
+  gap: 10px;
+  padding: 10px 0;
+}
+.icondiv * {
+  padding: 20px 0;
+}
+.join {
+  padding: 10px 32px;
+  gap: 10px;
+  border-radius: 25px;
+  background-color: #31a0fe;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.started {
+  padding: 10px 32px;
+  gap: 10px;
+  border-radius: 25px;
+  background-color: #fff;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Navbar öğelerini sıralı bir şekilde göster */
+    align-items: center; /* Öğeleri dikey olarak ortala */
+    height: auto; /* Yükseklik otomatik ayarlanacak */
+  }
+}
