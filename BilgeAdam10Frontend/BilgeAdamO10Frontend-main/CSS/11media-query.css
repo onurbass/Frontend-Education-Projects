@@ -1,0 +1,11 @@
+@media screen and (700px < width < 900px) {
+  ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 700px) {
+  .profile {
+    display: none;
+  }
+}

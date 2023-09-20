@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+      nav {
+        background-color: rgb(128, 128, 128);
+        padding: 10px;
+      }
+      #button1 {
+        background-color: rgb(61, 59, 59);
+        width: 650px;
+      }
+      #ayak {
+        background-color: brown;
+        text-align: center;
+        height: 30px;
+        padding-top: 15px;
+      }
+      a {
+        margin: 10px;
+        color: white;
+      }
+
+      img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+      }
+      #section1 {
+        text-align: center;
+      }
+      #section2 {
+        background-color: aliceblue;
+      }
+      #section4 {
+        padding-left: 20px;
+        background-color: aliceblue;
+      }
+      h2 {
+        margin-left: 15px;
+      }
+      h4 {
+        margin-left: 30px;
+      }
+      p {
+        margin-left: 30px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 sütunlu grid oluşturur */
+        gap: 5px; /* Kutucuklar arasındaki boşluğu ayarlar */
+      }
+
+      .box {
+        font-size: x-small;
+      }
+      #label1 {
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="section1">
+      <h1>Welcome to My Website</h1>
+      <p>
+        Hello, I'm Caner Öksüz, a Java developer. Passionate about creating
+        awesome websites
+      </p>
+
+      <img
+        src="https://www.w3schools.com/html/pic_trulli.jpg"
+        alt="evler"
+        width="250"
+        height="200"
+      />
+    </section>
+
+    <section id="section3">
+      <h2>About Me</h2>
+      <h4>Background</h4>
+      <p>
+        I have been working inthee web development industry for over 5 years.
+        During this time , I have gained extensive experience in front-end
+        development and responsive web design
+      </p>
+      <h4>Education</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi officiis
+        aliquid itaque ipsam esse, temporibus labore modi, error iusto deleniti
+        quis ab in. Rerum sit quod libero. Animi voluptate fuga neque similique
+        eos iure natus esse non voluptatibus, cupiditate sit in dolore modi qui
+        molestiae ullam alias eligendi quos officia?
+      </p>
+    </section>
+    <section id="section2">
+      <h2>Skills</h2>
+      <div class="container">
+        <div class="box">
+          <h4>HTML</h4>
+          <p>
+            I am proficient in writing clean and semantic HTML code. I have I am
+            experienced in JavaScript and have worked on several experience in
+            using HTMLS features and understanding the interactive web projects.
+            I am familiar with modern frameworks like importance of
+            accessibility
+          </p>
+        </div>
+        <div class="box">
+          <h4>JavaScript</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint fuga
+            explicabo illum nostrum quisquam maiores illo suscipit et veniam
+            doloremque?
+          </p>
+        </div>
+        <div class="box">
+          <h4>CSS</h4>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae sit
+            dolore vero nobis nulla commodi explicabo minima exercitationem,
+            repellat labore.
+          </p>
+        </div>
+        <div class="box">
+          <h4>Responsive Design</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. A minus
+            mollitia culpa aut ipsum in necessitatibus sapiente quod qui
+            aliquam!
+          </p>
+        </div>
+      </div>
+    </section>
+    <h2>Projects</h2>
+    <div class="box">
+      <h4>Project 1 : E-commerce Website</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus velit
+        impedit blanditiis dicta quaerat deleniti, natus ex voluptatem vitae ad!
+      </p>
+    </div>
+    <div class="box">
+      <h4>Project 2 : Portofolio Website</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio vero sit
+        quod mollitia doloremque doloribus ab beatae obcaecati iure quos?
+      </p>
+    </div>
+    <section id="section4">
+      <h2>Contact Me</h2>
+      <label id="label1" for="nameId1">Name :</label>
+      <br />
+      <input style="width: 650px" id="nameId1" type="text" name="FirstName" />
+      <br />
+      <br />
+      <label for="nameId2"> Email:</label>
+      <br />
+
+      <input style="width: 650px" id="nameId1" type="text" name="Email" />
+      <br />
+      <br />
+      <label for="nameId2"> Message:</label><br />
+
+      <input
+        style="width: 650px; height: 80px"
+        id="nameId1"
+        type="text"
+        name="Message"
+      />
+      <br />
+      <br />
+      <button id="button1" type="submit">Submit</button>
+    </section>
+    <footer id="ayak">
+      Copyright &copy;
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+      Ünal Gani Berk All rights reserved
+    </footer>
+  </body>
+</html>

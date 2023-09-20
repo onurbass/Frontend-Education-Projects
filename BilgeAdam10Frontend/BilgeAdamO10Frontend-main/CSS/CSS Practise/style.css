@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#header {
+  background-color: #c7c4c4;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 46px 0 5px 0;
+}
+
+.avatar {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+.social {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+#skills {
+  background-color: #c7c4c4;
+}
+.h-skills {
+  background-color: #c7c4c4;
+  position: absolute;
+}
+.html,
+.css {
+  display: inline;
+  float: left;
+  width: 50%;
+  background-color: #c7c4c4;
+}
+
+.js,
+.rd {
+  display: inline;
+  width: 50%;
+  float: right;
+  background-color: #c7c4c4;
+}
+
+.ecommerce,
+.projectp {
+  margin-left: 20px;
+  margin-top: 0;
+}
+
+#contact {
+  background-color: #c7c4c4;
+}
+
+.submit {
+  background-color: #333;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0 20px 0;
+  width: 100%;
+}
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1px;
+  margin-top: 0;
+}
+.form * {
+  width: 100%;
+  margin: 5px;
+}
