@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+      }
+      .sablon {
+        width: 2500px;
+        height: 2500px;
+      }
+      .outer {
+        width: 800px;
+        height: 800px;
+        border: 5px solid blue;
+        position: relative;
+      }
+      .fix {
+        position: fixed;
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        top: 0;
+        left: 10px;
+        border: 3px solid gray;
+      }
+      .innerorange {
+        background-color: rgb(240, 211, 176);
+        width: 350px;
+        height: 350px;
+        border: 3px solid red;
+        position: absolute;
+        top: 200px;
+        left: 20px;
+      }
+      .relative {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border: 3px solid gray;
+        margin-left: 300px;
+        margin-top: -50px;
+      }
+      .absolute2 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        right: 250px;
+        top: 250px;
+      }
+      .absolute3 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+
+        right: 200px;
+        top: 200px;
+      }
+
+      .sticky {
+        position: sticky;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        border: 3px solid gray;
+        top: 560px;
+        left: 276px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sablon">
+      <div class="outer">
+        <div class="innerorange">
+          <div class="relative">
+            1Relative
+            <div>
+              <div class="absolute2">2absolute</div>
+              <div class="absolute3">3absolute</div>
+            </div>
+          </div>
+        </div>
+        <div class="fix">4fixed</div>
+        <div class="sticky">5sticky</div>
+      </div>
+    </div>
+  </body>
+</html>
