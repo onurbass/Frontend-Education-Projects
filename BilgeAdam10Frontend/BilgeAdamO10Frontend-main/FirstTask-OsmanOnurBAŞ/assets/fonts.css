@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Inter";
+  src: url(Inter/Inter-Regular.ttf), local("Inter-Regular");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(Montserrat/Montserrat-Medium.ttf), local("Montserrat Medium");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(Open_Sans/OpenSans-Regular.ttf), local("OpenSans Regular");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url(Open_Sans/OpenSans-ExtraBold.ttf), local("OpenSans ExtraBold");
+  font-weight: 400;
+}
