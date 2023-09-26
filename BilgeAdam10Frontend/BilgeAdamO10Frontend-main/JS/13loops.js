@@ -51,5 +51,6 @@ const ages = [32, 31, 25, 25, 29, 28, 28, 28, 26, 27, 31, 31, 27, 27];
 for (const age of ages) {
   total += age;
 }
+
 console.log("Toplam yaş:", total);
 console.log("Ortalama yaş:", total / ages.length);
