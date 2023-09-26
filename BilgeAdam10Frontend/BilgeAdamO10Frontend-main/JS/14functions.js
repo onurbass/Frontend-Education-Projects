@@ -3,6 +3,7 @@ const orhun = {
   surname: "Bayındır",
   date: 1995,
   town: "Ankara",
+  // method
   getInfo: function () {
     console.log(`${this.name}'un doğum yılı ${this.date}`);
   },
@@ -21,14 +22,16 @@ const getOrhunsLife = function () {
   orhun.getInfo();
 };
 
-// * Arrow Function
+// * Arrow Function ES6
 const printDescription = () => {
   console.log("Orhun'un özellikleri:");
 };
 
 getOrhunsLife();
 
-// Hungarian Notation // ! bunu tercih etmiyoruz
+// * Hungarian Notation
+// ! bunu tercih etmiyoruz
 const numberGetLength = () => {
   return 5;
 };
+
