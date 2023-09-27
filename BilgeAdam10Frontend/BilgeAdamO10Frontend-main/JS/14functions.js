@@ -35,5 +35,3 @@ const numberGetLength = () => {
   return 5;
 };
 
-
-kodu yazdın ->site yayınlandı
