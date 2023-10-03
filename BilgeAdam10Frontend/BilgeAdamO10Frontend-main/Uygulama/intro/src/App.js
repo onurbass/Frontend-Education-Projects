@@ -1,13 +1,12 @@
-import logo from "./logo.svg";
-import "./App.scss";
+
+import './App.css';
 
 function App() {
-  const style = { display: "none", backgroundColor: "blue" };
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p style={style}>
+       
+        <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
