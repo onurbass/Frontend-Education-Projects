@@ -1,42 +1,48 @@
+import React from "react";
+
+import Header from "./components/Header";
+import WhiteSection from "./components/WhiteSection";
+
+import avatar from "./cem.jpeg";
 import "./App.css";
 
 function App() {
+  const myList = ["Home", "About", "Skills", "Projects", "Contact"];
+  const aboutMe = [
+    "About Me",
+    "Background",
+    `I have been working in the web development industry for over 5 years. During this time, I have gained extensive experience in front-end development and responsive web design.`,
+    "Education",
+    `I graduated with a degree in Computer Science from XYZ University. My coursework included web development, software engineering, and database management.`,
+  ];
+
+  const projects = [
+    "Projects",
+    "Project 1: E-commerce Website",
+    `This project involved creating a fully functional e-commerce
+    website from scratch. I implemented features such as product
+    listing, shopping cart, user authentication, and payment
+    integration. The website was built using React and Redux for state
+    management.`,
+    "Project 2: Portfolio Website",
+    `I designed and developed a personal portfolio website to showcase
+    my skills and projects. The website features a clean and modern
+    design, and it is optimized for performance and SEO. I used HTML,
+    CSS, and JavaScript for the frontend.`,
+  ];
+
   return (
     <div className="App">
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#skills">Skills</a>
-            </li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Header className="Header" myList={myList} />
       <main>
         <section id="home">
           <h1>Welcome to My Website</h1>
           <p>
-            Hello, I'm Mualla, a web developer. Passionate about creating
-            awesome websites.
+            Hello, I'm cem, a web developer. Passionate about creating awesome
+            websites.
           </p>
 
-          <img
-            src="https://previews.123rf.com/images/inegvin/inegvin1701/inegvin170100078/69882113-user-sign-icon.-person-symbol.-human-avatar..jpg"
-            alt="Profile"
-          />
-
+          <img src={avatar} alt="Profile" />
           <div className="icons">
             <a href="#" title="Twitter">
               <i className="fa-brands fa-square-twitter fa-xl"></i>
@@ -56,25 +62,7 @@ function App() {
           </div>
         </section>
 
-        <section id="about">
-          <h2>About Me</h2>
-          <article>
-            <h3>Background</h3>
-            <p>
-              I have been working in the web development industry for over 5
-              years. During this time, I have gained extensive experience in
-              front-end development and responsive web design.
-            </p>
-          </article>
-          <article>
-            <h3>Education</h3>
-            <p>
-              I graduated with a degree in Computer Science from XYZ University.
-              My coursework included web development, software engineering, and
-              database management.
-            </p>
-          </article>
-        </section>
+        <WhiteSection className="about" myList={aboutMe} />
 
         <section id="skills">
           <h2>Skills</h2>
@@ -114,28 +102,7 @@ function App() {
           </ul>
         </section>
 
-        <section id="projects">
-          <h2>Projects</h2>
-          <article>
-            <h3>Project 1: E-commerce Website</h3>
-            <p>
-              This project involved creating a fully functional e-commerce
-              website from scratch. I implemented features such as product
-              listing, shopping cart, user authentication, and payment
-              integration. The website was built using React and Redux for state
-              management.
-            </p>
-          </article>
-          <article>
-            <h3>Project 2: Portfolio Website</h3>
-            <p>
-              I designed and developed a personal portfolio website to showcase
-              my skills and projects. The website features a clean and modern
-              design, and it is optimized for performance and SEO. I used HTML,
-              CSS, and JavaScript for the frontend.
-            </p>
-          </article>
-        </section>
+        <WhiteSection className="projects" myList={projects} />
 
         <section id="contact">
           <h2>Contact Me</h2>

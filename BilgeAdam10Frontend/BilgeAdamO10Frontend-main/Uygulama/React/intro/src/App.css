@@ -58,11 +58,11 @@ img {
   color: #333;
 }
 
-#about {
+.whiteSection {
   background-color: #fff;
   padding: 20px;
 }
-#about article {
+.whiteSection article {
   margin: 16px;
 }
 
