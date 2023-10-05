@@ -1,12 +1,14 @@
 import React from "react";
-import Card from "./components/Card/Card";
 
 import "./App.css";
+import Char from "./pages/chars/Char";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <div className="App">
-      <Card />
+      <Header />
+      <Char />
     </div>
   );
 }
