@@ -1,0 +1,62 @@
+.app {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .note-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  .notes {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-width: 200px;
+  }
+  
+  .note {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .note p {
+    margin: 0;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .edit-note {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  
+  .edit-note input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .add-note {
+    border: 1px solid #ccc;
+    padding: 10px;
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .add-note input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .add-note button {
+    width: 100%;
+  }
+  

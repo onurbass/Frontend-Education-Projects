@@ -1,0 +1,15 @@
+.tabs {
+  &-tab {
+    background-color: white;
+    font-family: sans-serif;
+    border: none;
+
+    & + & {
+      margin-left: 12px;
+    }
+
+    &.active {
+      background-color: hotpink;
+    }
+  }
+}

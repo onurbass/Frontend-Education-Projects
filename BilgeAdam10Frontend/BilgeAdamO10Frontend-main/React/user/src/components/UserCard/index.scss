@@ -1,0 +1,28 @@
+$size: 24px;
+
+.userCard {
+  padding: $size;
+  display: flex;
+  flex-direction: column;
+  gap: $size;
+  border-radius: 15px;
+  background-color: white;
+  width: calc((100% / 3) - 16px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  & &-info {
+    display: flex;
+    gap: $size;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  & &-contact {
+  }
+  & &-job {
+  }
+}
