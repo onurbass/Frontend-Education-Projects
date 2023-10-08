@@ -7,6 +7,7 @@ const Card = ({
   image,
   firstEpisodeName,
   episode,
+  url,
 }) => {
   return (
     <div className="card">
@@ -15,9 +16,12 @@ const Card = ({
       </div>
       <div className="right">
         <div>
-          <h1>{name}</h1>
+          <a href={url}>
+            <h2>{name}</h2>
+          </a>
+
           <span>
-            {status} {species}
+            {status} - {species}
           </span>
         </div>
         <div className="char-detail">
