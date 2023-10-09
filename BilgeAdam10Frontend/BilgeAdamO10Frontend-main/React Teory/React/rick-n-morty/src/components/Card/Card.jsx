@@ -4,7 +4,6 @@ import { getEpisodeName } from "../../service/service";
 
 const Card = ({ name, status, species, location, image, episode, url }) => {
   const [episodeName, setEpisodeName] = useState([]);
-
   useEffect(() => {
     getEpisodeName(episode[0])
       .then((name) => {
@@ -17,8 +16,6 @@ const Card = ({ name, status, species, location, image, episode, url }) => {
 
   const divStyle = { height: "0.5rem", width: "0.5rem", backgroundColor: "" };
 
-  console.log(typeof status);
-
   if (status === "Dead") {
     divStyle.backgroundColor = "#d63d2e";
   } else if (status === "Alive") {
@@ -26,11 +23,13 @@ const Card = ({ name, status, species, location, image, episode, url }) => {
   } else {
     divStyle.backgroundColor = "#696e68";
   }
+
   return (
     <div className="card">
       <div className="card-left">
         <img src={image} alt={name}></img>
       </div>
+
       <div className="card-right">
         <div className="section">
           <a href={url} target="_blank" rel="noreferrer">

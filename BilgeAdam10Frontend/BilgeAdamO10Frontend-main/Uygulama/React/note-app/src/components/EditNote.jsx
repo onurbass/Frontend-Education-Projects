@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const EditNote = () => {
-  return (
-    <div>EditNote</div>
-  )
-}
+  return <div>EditNote</div>;
+};
 
-export default EditNote
+export default EditNote;
