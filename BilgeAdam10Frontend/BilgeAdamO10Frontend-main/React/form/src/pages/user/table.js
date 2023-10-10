@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const UserTable = ({ data = [] }) => {
   return (
     <table>
@@ -12,7 +14,9 @@ const UserTable = ({ data = [] }) => {
       <tbody>
         {data.map(({ id, firstname, lastname, gender }) => (
           <tr key={id}>
-            <td>{id}</td>
+            <td>
+              <Link to={`/user/${id}/${firstname}`}>{id}</Link>
+            </td>
             <td>{firstname}</td>
             <td>{lastname}</td>
             <td>{gender}</td>

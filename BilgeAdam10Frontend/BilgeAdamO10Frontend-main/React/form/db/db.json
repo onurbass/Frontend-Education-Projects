@@ -29,6 +29,30 @@
       "lastname": "Zorlu",
       "gender": "male",
       "id": 5
+    },
+    {
+      "firstname": "Abdullah",
+      "lastname": "Aktaş",
+      "gender": "male",
+      "id": 6
+    },
+    {
+      "firstname": "Aminenur",
+      "lastname": "Göynük",
+      "gender": "female",
+      "id": 7
+    },
+    {
+      "firstname": "Aysu",
+      "lastname": "Çağışlar",
+      "gender": "female",
+      "id": 8
+    },
+    {
+      "firstname": "Soda",
+      "lastname": "",
+      "gender": "female",
+      "id": 9
     }
   ],
   "book": [
@@ -66,7 +90,7 @@
     },
     {
       "name": "user.form.visible",
-      "value": false,
+      "value": true,
       "id": 3
     }
   ]

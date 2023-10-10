@@ -1,0 +1,39 @@
+{
+  "user": [
+    {
+      "firstname": "Afife Betül",
+      "lastname": "Çakır",
+      "gender": "female",
+      "id": 1
+    },
+    {
+      "firstname": "Burak",
+      "lastname": "Delice",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "firstname": "Alperen",
+      "lastname": "Sertoğlu",
+      "gender": "male",
+      "id": 3
+    }
+  ],
+  "book": [
+    {
+      "book": "Yüzüklerin Efendisi",
+      "author": "Tolkien",
+      "id": 1
+    },
+    {
+      "book": "Tehlikeli Oyunlar",
+      "author": "Oğuz Atay",
+      "id": 2
+    },
+    {
+      "book": "İnsan Olmak",
+      "author": "Engin Geçtan",
+      "id": 3
+    }
+  ]
+}
