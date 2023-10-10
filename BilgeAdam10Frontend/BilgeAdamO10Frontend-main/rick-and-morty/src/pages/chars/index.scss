@@ -1,0 +1,10 @@
+$bg: #272b33;
+
+.chars {
+  background-color: $bg;
+  padding: 4.5rem 6.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+}
