@@ -19,12 +19,19 @@
       "id": 3
     },
     {
-      "firstname": "onur",
-      "lastname": "bass",
+      "firstname": "Mehmet Caner",
+      "lastname": "Öksüz",
       "gender": "male",
       "id": 4
+    },
+    {
+      "firstname": "Serkan Şahin",
+      "lastname": "Zorlu",
+      "gender": "male",
+      "id": 5
     }
   ],
+  
   "book": [
     {
       "book": "Yüzüklerin Efendisi",
@@ -39,6 +46,29 @@
     {
       "book": "İnsan Olmak",
       "author": "Engin Geçtan",
+      "id": 3
+    },
+    {
+      "book": "Alkoller",
+      "author": "Guillaume Apollinaire",
+      "id": 4
+    }
+  ],
+
+  "permission": [
+    {
+      "name": "user.tab.visible",
+      "value": true,
+      "id": 1
+    },
+    {
+      "name": "button.collapsed.visible",
+      "value": true,
+      "id": 2
+    },
+    {
+      "name": "user.form.visible",
+      "value": false,
       "id": 3
     }
   ]

@@ -1,0 +1,24 @@
+{
+  "user": [
+    {
+      "firstname": "Burak",
+      "lastname": "Delice",
+      "email": "burak.delice@bilgeadam.com",
+      "age": 28,
+      "address": "adres1",
+      "id": 2
+    },
+    {
+      "firstname": "Gizem",
+      "lastname": "Kuşçu",
+      "email": "gizem.kuscu@bilgeadam.com",
+      "age": 21,
+      "address": "adres3",
+      "id": 3
+    }
+  ],
+  "role": [],
+  "permission": [],
+  "task": [],
+  "flow": []
+}

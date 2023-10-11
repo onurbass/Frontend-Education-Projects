@@ -1,24 +1,28 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Layout, Menu, Button, theme } from "antd";
 
-import User from "../../pages/user";
-import Role from "../../pages/role";
-import Book from "../../pages/book";
+import Todo from "../../pages/Todo";
+import Login from "../../pages/login";
+import UseMemoPage from "../../pages/usememo";
+import Permission from "../../pages/permission";
 
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   UploadOutlined,
-  UserOutlined,
   VideoCameraOutlined,
 } from "@ant-design/icons";
+
 import "./index.scss";
+import PermissionContext from "../../context/Permission";
 
 const { Header, Sider, Content } = Layout;
 
 const MainLayout = () => {
+  const { permissions } = useContext(PermissionContext);
+  console.log(permissions);
   const [collapsed, setCollapsed] = useState(false);
 
   const {
@@ -35,25 +39,33 @@ const MainLayout = () => {
             mode="inline"
             defaultSelectedKeys={["1"]}
             items={[
-              {
-                key: "1",
-                icon: <UserOutlined />,
-                label: <Link to="/user">User</Link>,
-              },
+              ...(permissions.some((p) => p === "todo.tab.visible")
+                ? [
+                    {
+                      key: "1",
+                      icon: <UploadOutlined />,
+                      label: <Link to="/todo">Todo</Link>,
+                    },
+                  ]
+                : []),
               {
                 key: "2",
-                icon: <VideoCameraOutlined />,
-                label: <Link to="/role">Role</Link>,
+                icon: <UploadOutlined />,
+                label: <Link to="/login">Login</Link>,
               },
               {
                 key: "3",
                 icon: <UploadOutlined />,
-                label: <Link to="/book">Book</Link>,
+                label: <Link to="/usememo">UseMemo</Link>,
+              },
+              {
+                key: "4",
+                icon: <VideoCameraOutlined />,
+                label: <Link to="/permission">Permission</Link>,
               },
             ]}
           />
         </Sider>
-
         <Layout>
           <Header
             style={{
@@ -81,10 +93,14 @@ const MainLayout = () => {
             }}
           >
             <Routes>
-              <Route path="/" element={<User />} exact />
-              <Route path="/user" element={<User />} />
-              <Route path="/role" element={<Role />} />
-              <Route path="/book" element={<Book />} />
+              <Route path="/" element={<Todo />} exact />
+
+              {permissions.some((p) => p === "todo.tab.visible") && (
+                <Route path="/todo" element={<Todo />} />
+              )}
+              <Route path="/login" element={<Login />} />
+              <Route path="/usememo" element={<UseMemoPage />} />
+              <Route path="/permission" element={<Permission />} />
             </Routes>
           </Content>
         </Layout>

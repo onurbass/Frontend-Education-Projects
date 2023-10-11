@@ -1,5 +1,5 @@
-import { useCallback, useMemo, useState } from "react";
-import { Button, Form, InputNumber } from "antd";
+import React, { useMemo, useState } from "react";
+import { Form, Button, InputNumber } from "antd";
 
 const UseMemoPage = () => {
   const [values, setValues] = useState({});
@@ -8,24 +8,28 @@ const UseMemoPage = () => {
     return values.x + values.y;
   }, [values]);
 
-  const onFinishWithUseCallBack = useCallback((serkan) => {
-    setValues(serkan);
-  }, []);
+  const onFinish = (caner) => {
+    setValues(caner);
+    console.log(caner);
+  };
 
   return (
     <>
       <Form
         name="useMemo"
         labelCol={{
-          span: 6,
+          span: 8,
         }}
         wrapperCol={{
-          span: 18,
+          span: 16,
         }}
         style={{
           maxWidth: 600,
         }}
-        onFinish={onFinishWithUseCallBack}
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
         autoComplete="off"
       >
         <Form.Item
@@ -34,7 +38,7 @@ const UseMemoPage = () => {
           rules={[
             {
               required: true,
-              message: "Please input the x!",
+              message: "Please input x!",
             },
           ]}
         >
@@ -47,17 +51,16 @@ const UseMemoPage = () => {
           rules={[
             {
               required: true,
-              message: "Please input the y!",
+              message: "Please input y!",
             },
           ]}
         >
           <InputNumber />
         </Form.Item>
-
         <Form.Item
           wrapperCol={{
-            offset: 6,
-            span: 18,
+            offset: 8,
+            span: 16,
           }}
         >
           <Button type="primary" htmlType="submit">

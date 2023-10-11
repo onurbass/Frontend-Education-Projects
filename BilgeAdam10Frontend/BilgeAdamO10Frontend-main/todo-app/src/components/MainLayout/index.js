@@ -1,24 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Layout, Menu, Button, theme } from "antd";
 
-import User from "../../pages/user";
-import Role from "../../pages/role";
-import Book from "../../pages/book";
+import Todo from "../../pages/Todo";
 
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
+
 } from "@ant-design/icons";
+
 import "./index.scss";
 
 const { Header, Sider, Content } = Layout;
 
 const MainLayout = () => {
+
   const [collapsed, setCollapsed] = useState(false);
 
   const {
@@ -37,23 +36,12 @@ const MainLayout = () => {
             items={[
               {
                 key: "1",
-                icon: <UserOutlined />,
-                label: <Link to="/user">User</Link>,
-              },
-              {
-                key: "2",
-                icon: <VideoCameraOutlined />,
-                label: <Link to="/role">Role</Link>,
-              },
-              {
-                key: "3",
                 icon: <UploadOutlined />,
-                label: <Link to="/book">Book</Link>,
+                label: <Link to="/todo">Todo</Link>,
               },
             ]}
           />
         </Sider>
-
         <Layout>
           <Header
             style={{
@@ -61,16 +49,16 @@ const MainLayout = () => {
               background: colorBgContainer,
             }}
           >
-            <Button
-              type="text"
-              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-              onClick={() => setCollapsed((prevState) => !prevState)}
-              style={{
-                fontSize: "16px",
-                width: 64,
-                height: 64,
-              }}
-            />
+              <Button
+                type="text"
+                icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+                onClick={() => setCollapsed((prevState) => !prevState)}
+                style={{
+                  fontSize: "16px",
+                  width: 64,
+                  height: 64,
+                }}
+              />
           </Header>
           <Content
             style={{
@@ -81,10 +69,8 @@ const MainLayout = () => {
             }}
           >
             <Routes>
-              <Route path="/" element={<User />} exact />
-              <Route path="/user" element={<User />} />
-              <Route path="/role" element={<Role />} />
-              <Route path="/book" element={<Book />} />
+              <Route path="/" element={<Todo />} exact />
+              <Route path="/todo" element={<Todo />} />
             </Routes>
           </Content>
         </Layout>
