@@ -18,7 +18,25 @@
     }
   ],
   "role": [],
-  "permission": [],
-  "task": [],
+  "permission": [
+    {
+      "permission_name": "sa",
+      "id": 1
+    },
+    {
+      "permission_name": "saadasd",
+      "id": 2
+    }
+  ],
+  "task": [
+    {
+      "task": "dsgfdsgsdsfsdfdfgsdg",
+      "id": 4
+    },
+    {
+      "task": "safasfasf",
+      "id": 5
+    }
+  ],
   "flow": []
 }
