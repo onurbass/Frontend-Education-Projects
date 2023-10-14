@@ -1,34 +1,33 @@
 import { Button, Form, Input, Modal } from "antd";
-import React from "react";
 
-const TaskForm = ({ isModalOpen, onFinish, initialValue, onCancel }) => {
+const TaskForm = ({ isModalOpen, onCancel, initialValues, onFinish }) => {
   return (
     <Modal
-      title="Task"
+      title="Tasks"
       open={isModalOpen}
       onCancel={onCancel}
-      okButtonProps={{ style: { display: "none" } }}
       cancelButtonProps={{ style: { display: "none" } }}
+      okButtonProps={{ style: { display: "none" } }}
     >
       <Form
-        name="task"
+        name="tasks"
         labelCol={{
           span: 8,
         }}
         wrapperCol={{
           span: 16,
         }}
-        initialValues={initialValue}
+        initialValues={initialValues}
         onFinish={onFinish}
         autoComplete="off"
       >
         <Form.Item
-          label="Task"
-          name="task"
+          label="Name"
+          name="name"
           rules={[
             {
               required: true,
-              message: "Please input task!",
+              message: "Please input the name!",
             },
           ]}
         >
@@ -42,7 +41,7 @@ const TaskForm = ({ isModalOpen, onFinish, initialValue, onCancel }) => {
           }}
         >
           <Button type="primary" htmlType="submit">
-            Submit
+            Save
           </Button>
         </Form.Item>
       </Form>

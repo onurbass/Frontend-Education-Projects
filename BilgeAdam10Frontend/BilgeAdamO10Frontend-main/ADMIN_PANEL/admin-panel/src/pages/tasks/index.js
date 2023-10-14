@@ -1,33 +1,31 @@
-import { DeleteOutlined, EditOutlined, PlusOutlined } from "@ant-design/icons";
-import { Button, Col, Row, Space, Table } from "antd";
-
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   addTasks,
-  deleteTask,
+  deleteTasks,
   getTasks,
-  updateTask,
+  updateTasks,
 } from "../../services/task";
-
+import { Button, Col, Row, Space, Table } from "antd";
 import "./index.scss";
 import TaskForm from "./form";
+import { DeleteOutlined, EditOutlined, PlusOutlined } from "@ant-design/icons";
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [editingTask, setEditingTask] = useState();
-
-  const onClickAddTask = () => {
-    setEditingTask();
-    setIsModalOpen(true);
-  };
+  const [editingTasks, setEditingTasks] = useState();
   const onCancel = () => {
     setIsModalOpen(false);
   };
+
+  const onClickAddTasks = () => {
+    setIsModalOpen(true);
+  };
+
   const onFinish = (values) => {
-    if (editingTask) {
-      updateTask({ ...values, id: editingTask.id }).then((response) => {
+    if (editingTasks) {
+      updateTasks({ ...values, id: editingTasks.id }).then((response) => {
         setTasks((prevState) =>
           prevState.map((t) => (t.id === response.id ? response : t))
         );
@@ -39,28 +37,27 @@ const Tasks = () => {
     }
     setIsModalOpen(false);
   };
-  const onEdit = (task) => {
-    setEditingTask(task);
+  const onDelete = (id) => {
+    deleteTasks(id).then((response) => {
+      setTasks((prevState) => prevState.filter((t) => t.id !== id));
+    });
+  };
+  const onEdit = (tasks) => {
+    setEditingTasks(tasks);
     setIsModalOpen(true);
   };
-  const onDelete = (id) => {
-    deleteTask(id);
-    setTasks((prevState) => prevState.filter((p) => p.id !== id));
-  };
 
-  useEffect(() => {
-    getTasks().then((response) => setTasks(response));
-  });
   const columns = [
     {
-      title: "Task",
-      dataIndex: "task",
+      title: "Name",
+      dataIndex: "name",
       key: "t1",
     },
     {
       title: "Action",
       dataIndex: "id",
       key: "t2",
+      width: "100px",
       render: (cell, row) => (
         <Space>
           <Button
@@ -75,13 +72,20 @@ const Tasks = () => {
             shape="circle"
             icon={<DeleteOutlined />}
             size="small"
-            danger
             onClick={() => onDelete(cell)}
+            danger
           />
         </Space>
       ),
     },
   ];
+
+  useEffect(() => {
+    getTasks().then((response) => {
+      setTasks(response);
+    });
+  }, []);
+
   return (
     <Space className="tasks" direction="vertical">
       <Row>
@@ -92,21 +96,17 @@ const Tasks = () => {
             shape="circle"
             icon={<PlusOutlined />}
             size="large"
-            onClick={onClickAddTask}
+            onClick={onClickAddTasks}
           />
         </Col>
       </Row>
-      <Table
-        dataSource={tasks.map((task, index) => ({ ...task, key: index }))}
-        columns={columns}
-      />
-
+      <Table dataSource={tasks} columns={columns} />
       {isModalOpen && (
         <TaskForm
           isModalOpen={isModalOpen}
           onCancel={onCancel}
           onFinish={onFinish}
-          initialValue={editingTask}
+          initialValues={editingTasks}
         />
       )}
     </Space>

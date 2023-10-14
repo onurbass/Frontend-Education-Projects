@@ -1,6 +1,13 @@
-import { Button, Form, Input, InputNumber, Modal } from "antd";
+import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
 
-const UserForm = ({ isModalOpen, onCancel, onFinish, initialValues }) => {
+const UserForm = ({
+  isModalOpen,
+  onCancel,
+  onFinish,
+  initialValues,
+  roles,
+  flows,
+}) => {
   return (
     <Modal
       title="User"
@@ -88,6 +95,32 @@ const UserForm = ({ isModalOpen, onCancel, onFinish, initialValues }) => {
           ]}
         >
           <Input.TextArea />
+        </Form.Item>
+
+        <Form.Item
+          label="Roles"
+          name="roles"
+          rules={[
+            {
+              required: true,
+              message: "Please select!",
+            },
+          ]}
+        >
+          <Select mode="tags" options={roles} />
+        </Form.Item>
+
+        <Form.Item
+          label="Flows"
+          name="flows"
+          rules={[
+            {
+              required: true,
+              message: "Please select! any flow",
+            },
+          ]}
+        >
+          <Select mode="tags" options={flows} />
         </Form.Item>
 
         <Form.Item

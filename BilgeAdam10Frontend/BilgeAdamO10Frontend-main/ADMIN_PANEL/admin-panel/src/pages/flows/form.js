@@ -1,16 +1,22 @@
-import { Button, Form, Input, Modal } from "antd";
+import { Button, Form, Input, Modal, Select } from "antd";
 
-const PermissionForm = ({ isModalOpen, onCancel, initialValues, onFinish }) => {
+const FlowForm = ({
+  isModalOpen,
+  onCancel,
+  initialValues,
+  onFinish,
+  tasks,
+}) => {
   return (
     <Modal
-      title="Permission"
+      title="Flow"
       open={isModalOpen}
       onCancel={onCancel}
       cancelButtonProps={{ style: { display: "none" } }}
       okButtonProps={{ style: { display: "none" } }}
     >
       <Form
-        name="permission"
+        name="flow"
         labelCol={{
           span: 8,
         }}
@@ -22,7 +28,7 @@ const PermissionForm = ({ isModalOpen, onCancel, initialValues, onFinish }) => {
         autoComplete="off"
       >
         <Form.Item
-          label="Permission Name"
+          label="Flow Name"
           name="name"
           rules={[
             {
@@ -32,6 +38,23 @@ const PermissionForm = ({ isModalOpen, onCancel, initialValues, onFinish }) => {
           ]}
         >
           <Input />
+        </Form.Item>
+
+        <Form.Item label="Description" name="description">
+          <Input.TextArea />
+        </Form.Item>
+
+        <Form.Item
+          label="Tasks"
+          name="tasks"
+          rules={[
+            {
+              required: true,
+              message: "Please select!",
+            },
+          ]}
+        >
+          <Select mode="tags" options={tasks} />
         </Form.Item>
 
         <Form.Item
@@ -49,4 +72,4 @@ const PermissionForm = ({ isModalOpen, onCancel, initialValues, onFinish }) => {
   );
 };
 
-export default PermissionForm;
+export default FlowForm;

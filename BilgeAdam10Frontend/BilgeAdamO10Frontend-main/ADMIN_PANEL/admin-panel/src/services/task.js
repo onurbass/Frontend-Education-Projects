@@ -6,17 +6,22 @@ export const getTasks = async () => {
   return response.data;
 };
 
-export const addTasks = async (task) => {
-  const response = await axios.post(taskUrl, task);
+export const getTaskCount = async () => {
+  const response = await axios.get(taskUrl);
+  return response.data.length;
+};
+
+export const addTasks = async (tasks) => {
+  const response = await axios.post(taskUrl, tasks);
   return response.data;
 };
 
-export const updateTask = async (task) => {
-  const response = await axios.put(`${taskUrl}/${task.id}`, task);
+export const updateTasks = async (tasks) => {
+  const response = await axios.put(`${taskUrl}/${tasks.id}`, tasks);
   return response.data;
 };
 
-export const deleteTask = async (id) => {
+export const deleteTasks = async (id) => {
   const response = await axios.delete(`${taskUrl}/${id}`);
   return response.data;
 };

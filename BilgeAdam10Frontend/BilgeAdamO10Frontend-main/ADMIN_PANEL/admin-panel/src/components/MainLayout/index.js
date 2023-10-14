@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Breadcrumb, Col, Layout, Menu, Row, Switch, theme } from "antd";
 import { MoonSvg, SunSvg } from "../../assets/images/svg";
+import SettingsContext from "../../context/SettingsContext";
 
 const { Header, Content, Footer, Sider } = Layout;
 
 const defaultTheme = "light";
 
 const MainLayout = ({ menu, children, onChangeTheme }) => {
+  const { settings } = useContext(SettingsContext);
   const [collapsed, setCollapsed] = useState(false);
   const [themeState, setThemeState] = useState(defaultTheme);
   const {
@@ -44,7 +46,7 @@ const MainLayout = ({ menu, children, onChangeTheme }) => {
       <Layout>
         <Header style={{ background: colorBgContainer }}>
           <Row>
-            <Col flex="auto" />
+            <Col flex="auto">{settings.userName}</Col>
             <Col>
               <Switch
                 checkedChildren={<MoonSvg />}
