@@ -1,0 +1,163 @@
+{
+  "user": [
+    {
+      "firstname": "Burak",
+      "lastname": "Delice",
+      "email": "burak.delice@bilgeadam.com",
+      "age": 28,
+      "address": "adres1",
+      "roles": [
+        4
+      ],
+      "flows": [
+        1
+      ],
+      "id": 2
+    },
+    {
+      "firstname": "Gizem",
+      "lastname": "Kuşçuoğlu",
+      "email": "gizem.kuscu@bilgeadam.com",
+      "age": 21,
+      "address": "adres3",
+      "roles": [
+        3,
+        5
+      ],
+      "flows": [
+        1
+      ],
+      "id": 3
+    },
+    {
+      "firstname": "Afife Betül",
+      "lastname": "Çakır",
+      "email": "afifebetulcakir@gmail.com",
+      "age": 31,
+      "address": "adress1",
+      "roles": [
+        3
+      ],
+      "flows": [
+        3
+      ],
+      "id": 4
+    },
+    {
+      "firstname": "Alperen",
+      "lastname": "Sertoğlu",
+      "email": "alperen.sertoglu@bilgeadam.com",
+      "age": 27,
+      "address": "adress",
+      "roles": [
+        5
+      ],
+      "flows": [
+        1,
+        2,
+        3
+      ],
+      "id": 5
+    }
+  ],
+  "role": [
+    {
+      "name": "Super Admin",
+      "description": "Super Admin",
+      "permissions": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "id": 3
+    },
+    {
+      "name": "Standart User",
+      "permissions": [
+        7,
+        5,
+        8
+      ],
+      "id": 4
+    },
+    {
+      "name": "Viewer",
+      "permissions": [
+        5,
+        7
+      ],
+      "id": 5
+    }
+  ],
+  "permission": [
+    {
+      "name": "dashboard.view",
+      "id": 5
+    },
+    {
+      "name": "user.add",
+      "id": 6
+    },
+    {
+      "name": "user.view",
+      "id": 7
+    },
+    {
+      "name": "user.edit",
+      "id": 8
+    },
+    {
+      "name": "user.delete",
+      "id": 9
+    }
+  ],
+  "task": [
+    {
+      "name": "Task1",
+      "id": 1
+    },
+    {
+      "name": "Task2",
+      "id": 2
+    },
+    {
+      "name": "Task3",
+      "id": 3
+    }
+  ],
+  "flow": [
+    {
+      "name": "Flow 1",
+      "tasks": [
+        1
+      ],
+      "id": 1
+    },
+    {
+      "name": "Flow 2",
+      "tasks": [
+        1
+      ],
+      "id": 2
+    },
+    {
+      "name": "Flow 3",
+      "tasks": [
+        2,
+        1
+      ],
+      "id": 3
+    },
+    {
+      "name": "Flow 4",
+      "tasks": [
+        1,
+        2,
+        3
+      ],
+      "id": 4
+    }
+  ]
+}
